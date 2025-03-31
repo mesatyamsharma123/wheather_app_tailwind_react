@@ -3,7 +3,9 @@ import search1 from "../../assets/search.png";
 import cloudy from "../../assets/cloudy.png";
 import humid from "../../assets/humid.png";
 import wind from "../../assets/windy.png";
-function Home() {
+import bgDark from "../../assets/back.avif";
+import bgLight from "../../assets/light1.webp";
+function Home({dark}) {
 const [data,setData]=useState(false);
     const search = async (city) => {
       try {
@@ -34,7 +36,10 @@ const input=useRef();
 
   return (
     <div className="flex flex-col h-full items-center  mt-20 md:mt-30  ">
-      <div className='flex flex-col p-4 bg-slate-500 dark:bg-[url("../../../src/assets/back.avif")] bg-[url("../../../src/assets/light1.webp")] bg-cover bg-center rounded-2xl md:w-lg md:p-10'>
+<div
+  className="flex flex-col object-fit p-4 bg-slate-500 bg-cover bg-center rounded-2xl md:w-lg md:p-10"
+  style={{ backgroundImage: dark ? `url(${bgDark})` : `url(${bgLight})` }}
+>
         <div className="flex flex-row  gap-3">
           <input ref={input}
             className="text-2xl  bg-white text-black placeholder:text-black dark:text-white md:placeholder:text-center p-4 w-full rounded-2xl placeholder:text-center dark:placeholder:text-white placeholder:font-medium placeholder:text-xl dark:bg-slate-800"
