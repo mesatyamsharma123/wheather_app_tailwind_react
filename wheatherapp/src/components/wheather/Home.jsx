@@ -38,7 +38,7 @@ const input=useRef();
     <div className="flex flex-col h-full items-center  mt-20 md:mt-30  ">
 <div
   className="flex flex-col object-fit p-4 bg-slate-500 bg-cover bg-center rounded-2xl md:w-lg md:p-10"
-  style={{ backgroundImage: dark ? `url(${bgDark})` : `url(${bgLight})` }}
+  style={{ backgroundImage: dark ? `url(${bgLight})` : `url(${bgDark})` }}
 >
         <div className="flex flex-row  gap-3">
           <input ref={input}
