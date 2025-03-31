@@ -3,8 +3,8 @@ import search1 from "../../assets/search.png";
 import cloudy from "../../assets/cloudy.png";
 import humid from "../../assets/humid.png";
 import wind from "../../assets/windy.png";
-import bgDark from "../../assets/back.avif";
-import bgLight from "../../assets/light1.webp";
+import bgDark from "../../../public/back.avif";
+import bgLight from "../../../public/light1.webp";
 function Home({dark}) {
 const [data,setData]=useState(false);
     const search = async (city) => {
